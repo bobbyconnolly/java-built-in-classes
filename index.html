@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .category {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .category h2 {
+            color: #2980b9;
+            margin-top: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        th {
+            background-color: #e9ecef;
+            font-weight: 600;
+        }
+        
+        .code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f1f1f1;
+            padding: 2px 4px;
+            border-radius: 3px;
+            color: #e74c3c;
+        }
+        
+        .note {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Essential Java Built-in Classes</h1>
+    
+    <div class="category">
+        <h2>Input/Output Classes</h2>
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Description</th>
+                <th>Common Usage</th>
+            </tr>
+            <tr>
+                <td><span class="code">Scanner</span></td>
+                <td>Used for reading input from various sources (keyboard, files, etc.)</td>
+                <td><span class="code">Scanner scanner = new Scanner(System.in);<br>String input = scanner.nextLine();</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">System</span></td>
+                <td>Provides standard input/output streams and utility methods</td>
+                <td><span class="code">System.out.println("Hello");<br>System.err.println("Error");</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="category">
+        <h2>Wrapper Classes</h2>
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Description</th>
+                <th>Common Usage</th>
+            </tr>
+            <tr>
+                <td><span class="code">Integer</span></td>
+                <td>Wraps primitive int type, used in collections</td>
+                <td><span class="code">Integer num = Integer.valueOf(42);<br>int x = Integer.parseInt("42");</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">Double</span></td>
+                <td>Wraps primitive double type, used in collections</td>
+                <td><span class="code">Double pi = Double.valueOf(3.14);<br>double d = Double.parseDouble("3.14");</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">Boolean</span></td>
+                <td>Wraps primitive boolean type, used in collections</td>
+                <td><span class="code">Boolean flag = Boolean.valueOf(true);<br>boolean b = Boolean.parseBoolean("true");</span></td>
+            </tr>
+        </table>
+        <p class="note">Note: Wrapper classes are essential when using collections (ArrayList, HashSet, etc.) as they don't accept primitive types.</p>
+    </div>
+
+    <div class="category">
+        <h2>String Handling</h2>
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Description</th>
+                <th>Common Usage</th>
+            </tr>
+            <tr>
+                <td><span class="code">String</span></td>
+                <td>Represents text as a sequence of characters</td>
+                <td><span class="code">String str = "Hello";<br>str = str.toUpperCase();</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">StringBuilder</span></td>
+                <td>Mutable sequence of characters, efficient for string manipulation</td>
+                <td><span class="code">StringBuilder sb = new StringBuilder();<br>sb.append("Hello").append(" World");</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="category">
+        <h2>Collections</h2>
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Description</th>
+                <th>Common Usage</th>
+            </tr>
+            <tr>
+                <td><span class="code">ArrayList</span></td>
+                <td>Resizable array implementation of the List interface</td>
+                <td><span class="code">ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();<br>list.add("item");</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">HashMap</span></td>
+                <td>Implementation of Map interface using hash table</td>
+                <td><span class="code">HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();<br>map.put("key", 42);</span></td>
+            </tr>
+        </table>
+        <p class="note">Note: Collections are fundamental for storing and manipulating groups of objects.</p>
+    </div>
+
+    <div class="category">
+        <h2>Math and Numbers</h2>
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Description</th>
+                <th>Common Usage</th>
+            </tr>
+            <tr>
+                <td><span class="code">Math</span></td>
+                <td>Provides basic math operations and constants</td>
+                <td><span class="code">double sqrt = Math.sqrt(16);<br>double random = Math.random();</span></td>
+            </tr>
+            <tr>
+                <td><span class="code">Random</span></td>
+                <td>Generates pseudo-random numbers</td>
+                <td><span class="code">Random rand = new Random();<br>int num = rand.nextInt(100);</span></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
